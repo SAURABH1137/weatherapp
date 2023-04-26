@@ -1,0 +1,116 @@
+.display img {
+    transition: all 2s ease-in-out;
+    mix-blend-mode: multiply;
+    height: 150px;
+    width: 150px;
+    filter: drop-shadow(15px 10px 10px rgb(0, 0, 0, 0.4));
+    animation: weather 5s linear infinite;
+}
+#searchinput{
+    width: 100%;
+}
+
+.sup {
+    transition: all 2s ease;
+    font-size: 50%;
+    vertical-align: top;
+}
+
+.display {
+    transition: all 2s ease;
+    display: flex;
+    flex-direction: row;
+}
+
+.temp {
+    transition: all 2s ease;
+    margin: auto 0;
+}
+
+.display1 {
+    transition: all 2s ease;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.MuiBox-root li:nth-child(1) svg {
+    animation: svg 1s linear infinite;
+}
+
+.MuiBox-root li:nth-child(2) svg {
+    animation: svgrotate 0.3s linear infinite;
+}
+
+.MuiBox-root li:nth-child(3) svg {
+    animation: svgcompress 2s linear infinite;
+    transition: all 0.5s ease;
+    transform: scale(1);
+}
+
+@keyframes weather {
+    0% {
+        margin-left: 0px;
+        transition: all 2s ease-in-out;
+        filter: drop-shadow(10px 10px 10px rgb(0, 0, 0, 0.4));
+    }
+
+    25% {
+        margin-left: 10px;
+        transition: all 2s ease-in-out;
+        filter: drop-shadow(5px 10px 10px rgb(0, 0, 0, 0.4));
+    }
+
+    50% {
+        margin-left: 0px;
+        transition: all 2s ease-in-out;
+        filter: drop-shadow(0px 10px 10px rgb(0, 0, 0, 0.4));
+    }
+
+    75% {
+        margin-left: -10px;
+        transition: all 2s ease-in-out;
+        filter: drop-shadow(5px 10px 10px rgb(0, 0, 0, 0.4));
+    }
+
+    100% {
+        margin-left: 0px;
+        transition: all 2s ease-in-out;
+        filter: drop-shadow(10px 10px 10px rgb(0, 0, 0, 0.4));
+    }
+
+}
+
+@keyframes svg {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes svgrotate {
+    0% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes svgcompress {
+    0% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
